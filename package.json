@@ -4,7 +4,13 @@
   "description": "Boilerplate to TDD using mocha and Chai",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha src/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha src/**/*.spec.js --bail --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha src/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "exclude": ["src/**"]
   },
   "repository": {
     "type": "git",
