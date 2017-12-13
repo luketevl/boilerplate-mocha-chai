@@ -4,11 +4,16 @@
   "description": "Boilerplate to TDD using mocha and Chai",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && test:coverage",
     "test": "./node_modules/.bin/mocha src/**/*.spec.js --bail --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha src/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
+    "function": 90,
+    "lines": 90,
+    "check-coverage": true,
     "reporter": ["text", "html"],
     "exclude": ["src/**/*.spec.js"]
   },
@@ -32,6 +37,10 @@
     "mocha": "^4.0.1",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "nyc": "^11.3.0"
+    "nyc": "^11.3.0",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^0.14.3"
   }
 }
