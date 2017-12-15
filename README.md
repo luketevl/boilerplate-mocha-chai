@@ -12,3 +12,5 @@ Boilerplate using mocha and chai TDD
   - Support es6 configured
 - NYC COVERAGE
   - 90% functions and lines
+- TravisCI
+- Coveralls
