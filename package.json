@@ -22,7 +22,7 @@
     "check-coverage": true,
     "reporter": [
       "text",
-      "html"
+      "html" 
     ],
     "exclude": [
       "src/**/*.spec.js"
