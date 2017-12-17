@@ -8,14 +8,20 @@
     "prepush": "npm run lint && test:coverage",
     "test": "./node_modules/.bin/mocha src/**/*.spec.js --bail --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha src/**/*.spec.js --require babel-register --watch",
-    "test:coverage": "nyc npm test"
+    "test:coverage": "nyc npm test",
+    "start": "./node_modules/.bin/webpack-dev-server"
   },
   "nyc": {
     "function": 90,
     "lines": 90,
     "check-coverage": true,
-    "reporter": ["text", "html"],
-    "exclude": ["src/**/*.spec.js"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "src/**/*.spec.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -33,14 +39,17 @@
   },
   "homepage": "https://github.com/luketevl/boilerplate-mocha-chai#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^4.0.1",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "nyc": "^11.3.0",
+    "chai": "^4.1.2",
     "eslint": "^4.12.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }
