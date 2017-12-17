@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Boilerplate to TDD using mocha and Chai",
   "main": "lib/index.js",
-  "files": ["dist", "lib"],
+  "files": [
+    "dist",
+    "lib"
+  ],
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "./node_modules/.bin/mocha src/**/*.spec.js --require babel-register",
@@ -58,6 +61,8 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
+    "jsdom": "^11.5.1",
+    "jsdom-global": "^3.0.2",
     "mocha": "^4.0.1",
     "node-fetch": "^1.7.3",
     "nyc": "^11.3.0",
